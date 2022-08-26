@@ -3,39 +3,389 @@
     <meta charset="UTF-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-2.css" />
   </head>
   <body>
-    <section class="section">
-      <div class="tab">
-        <div class="title">about me.exe</div>
-
-        <div class="buttons-container">
-          <button type="button" class="buttons" id="minimize">
+    <!-- project -->
+    <section class="tab">
+      <div class="top-tab">
+        <div class="title">project</div>
+        <div class="button-container">
+          <button type="button">
             <img src="./images/minimize.svg" alt="" />
           </button>
-
-          <button type="button" class="buttons" id="buttons">
-            <span class="restore-down"
-              ><img src="./images/restore-down.svg" alt=""
-            /></span>
-            <span class="maximize"
-              ><img src="./images/maximize.svg" alt=""
-            /></span>
+          <button type="button">
+            <span><img src="./images/restore-down.svg" alt="" /></span
+            ><span><img src="./images/maximize.svg" alt="" /></span>
           </button>
-
-          <button type="button" class="buttons" id="close">
-            <img src="./images/close.svg" alt="" />
+          <button type="button">
+            <img src="images/close.svg" alt="" />
           </button>
         </div>
       </div>
-      <div class="info-container"></div>
+      <!-- content -->
+      <div class="content-tab">
+        <div class="search-bar">
+          <button type="button" class="search-btn">
+            <img src="images/search.svg" alt="" />
+          </button>
+          <input type="search" name="search" id="search" />
+        </div>
+        <div class="projects-container">
+          <div class="projects">
+            <button type="button" class="project-btn">
+              <img src="images/app-icons/folder.svg" alt="" />project 1
+            </button>
+            <button type="button" class="project-btn">
+              <img src="images/app-icons/folder.svg" alt="" />project 2
+            </button>
+            <button type="button" class="project-btn">
+              <img src="images/app-icons/folder.svg" alt="" />project 3
+            </button>
+          </div>
+          <div class="project-viewer">
+            <h1 class="title">project 1</h1>
+            <img class="project-img" src="" alt="" />
+            <p class="info">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Consequuntur, amet. Iste perferendis quaerat itaque facilis
+              accusantium totam dolore nihil minima.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    <div class="taskbar-container">
-      <button type="button" class="start-btn">start</button>
-      <div class="taskbar"></div>
+    <!-- end of project -->
+
+    <!-- about -->
+    <section class="tab">
+      <div class="top-tab">
+        <div class="title">about</div>
+        <div class="button-container">
+          <button type="button">
+            <img src="./images/minimize.svg" alt="" />
+          </button>
+          <button type="button">
+            <span><img src="./images/restore-down.svg" alt="" /></span
+            ><span><img src="./images/maximize.svg" alt="" /></span>
+          </button>
+          <button type="button">
+            <img src="images/close.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="content-tab">
+        <div class="tools-viewer">
+          <div class="tools">
+            <button type="button" class="tool">
+              <img src="images/about-icons/1.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/2.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/3.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/4.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/5.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/6.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/7.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/8.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/9.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/10.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/11.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/12.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/13.svg" alt="" />
+            </button>
+            <button type="button" class="tool">
+              <img src="images/about-icons/14.svg" alt="" />
+            </button>
+          </div>
+          <div class="viewer"></div>
+        </div>
+        <div class="palette">
+          <div class="switch">
+            <div class="color first" id="one"></div>
+            <div class="color second" id="five"></div>
+          </div>
+          <div class="colors">
+            <div class="color" id="one"></div>
+            <div class="color" id="two"></div>
+            <div class="color" id="three"></div>
+            <div class="color" id="four"></div>
+            <div class="color" id="five"></div>
+            <div class="color" id="six"></div>
+            <div class="color" id="seven"></div>
+            <div class="color" id="eight"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of about -->
+
+    <!-- contact -->
+    <section class="tab contact">
+      <div class="top-tab">
+        <div class="title">contact</div>
+        <div class="button-container">
+          <button type="button">
+            <img src="./images/minimize.svg" alt="" />
+          </button>
+          <button type="button">
+            <span><img src="./images/restore-down.svg" alt="" /></span
+            ><span><img src="./images/maximize.svg" alt="" /></span>
+          </button>
+          <button type="button">
+            <img src="images/close.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="content-tab">
+        <div class="search-bar">
+          <button type="button" class="search-btn">
+            <img src="images/search.svg" alt="" />
+          </button>
+          <input type="search" name="search" id="search" />
+        </div>
+        <div class="form-container">
+          <h1 class="form-title">Contact Me</h1>
+          <form action="" method="get" class="form">
+            <div class="form">
+              <label for="name">name</label
+              ><input type="text" name="name" id="name" class="text-area" />
+            </div>
+            <div class="form">
+              <label for="email">email</label
+              ><input type="email" name="email" id="email" class="text-area" />
+            </div>
+            <div class="form">
+              <label for="subject">subject</label
+              ><input
+                type="text"
+                name="subject"
+                id="subject"
+                class="text-area"
+              />
+            </div>
+            <div class="form">
+              <label for="message">message</label
+              ><textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                class="text-area"
+              ></textarea>
+            </div>
+            <div class="form-submit">
+              <input type="submit" id="submit" value="send message" />
+            </div>
+          </form>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/chaaaarlang" target="_blank"
+            ><img src="images/socials-icon/git.svg" alt=""
+          /></a>
+          <a href="https://github.com/chaaaarlang" target="_blank"
+            ><img src="images/socials-icon/linkedin.svg" alt=""
+          /></a>
+        </div>
+      </div>
+    </section>
+    <!-- end of contact -->
+
+    <!-- resume -->
+    <section class="tab">
+      <div class="top-tab">
+        <div class="title">resume</div>
+        <div class="button-container">
+          <button type="button">
+            <img src="./images/minimize.svg" alt="" />
+          </button>
+          <button type="button">
+            <span><img src="./images/restore-down.svg" alt="" /></span
+            ><span><img src="./images/maximize.svg" alt="" /></span>
+          </button>
+          <button type="button">
+            <img src="images/close.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="content-tab">
+        <div class="resume-tools">
+          <div class="first-div">
+            <select name="font" id="font-select">
+              <option value="poppins">poppins</option>
+            </select>
+            <select name="font-size" id="font-size">
+              <option value="16">16</option>
+            </select>
+          </div>
+          <div class="second-div">
+            <button type="button" class="text-tool" id="bold">b</button>
+            <button type="button" class="text-tool" id="italic">i</button>
+            <button type="button" class="text-tool" id="underline">u</button>
+          </div>
+          <div class="third-div">
+            <button type="button" class="align" id="align-left">
+              <img src="images/resume-icons/left.svg" alt="" />
+            </button>
+            <button type="button" class="align" id="align-center">
+              <img src="images/resume-icons/center.svg" alt="" />
+            </button>
+            <button type="button" class="align" id="align-right">
+              <img src="images/resume-icons/right.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="resume-viewer"></div>
+      </div>
+    </section>
+    <!-- end of resume -->
+
+    <!-- tagline -->
+    <section class="tab">
+      <div class="top-tab">
+        <div class="title">tagline.txt</div>
+        <div class="button-container">
+          <button type="button">
+            <img src="./images/minimize.svg" alt="" />
+          </button>
+          <button type="button">
+            <span><img src="./images/restore-down.svg" alt="" /></span
+            ><span><img src="./images/maximize.svg" alt="" /></span>
+          </button>
+          <button type="button">
+            <img src="images/close.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="content-tab">
+        <div class="tagline-viewer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis,
+          possimus?
+        </div>
+      </div>
+    </section>
+    <!-- end of tagline -->
+
+    <!-- headshot -->
+    <section class="tab">
+      <div class="top-tab">
+        <div class="title">headshot.txt</div>
+        <div class="button-container">
+          <button type="button">
+            <img src="./images/minimize.svg" alt="" />
+          </button>
+          <button type="button">
+            <span><img src="./images/restore-down.svg" alt="" /></span
+            ><span><img src="./images/maximize.svg" alt="" /></span>
+          </button>
+          <button type="button">
+            <img src="images/close.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="content-tab">
+        <div class="headshot-img">
+          <img src="images/pachi_boy2.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- end of headshot -->
+
+    <div class="icons">
+      <!-- <button type="button" class="icon-btn">
+        <img src="./images/app-icons/project.svg" alt="" />my project
+      </button>
+      <button type="button" class="icon-btn">
+        <img src="./images/app-icons/about.svg" alt="" />about
+      </button>
+      <button type="button" class="icon-btn">
+        <img src="./images/app-icons/contact.svg" alt="" />contact
+      </button>
+      <button type="button" class="icon-btn">
+        <img src="./images/app-icons/resume.svg" alt="" />resume
+      </button>
+      <button type="button" class="icon-btn">
+        <img src="./images/app-icons/tagline.svg" alt="" />tagline.txt
+      </button>
+      <button type="button" class="icon-btn">
+        <img src="./images/app-icons/headshot.svg" alt="" />headshot.jpg
+      </button> -->
+    </div>
+    <div class="container">
+      <div class="start-container">
+        <div class="start-header">
+          <img src="images/pachi_boy2.png" alt="" class="start-img" />
+          <h6 class="start-name">charlan</h6>
+        </div>
+        <div class="start-content">
+          <div class="start-icons">
+            <button type="button" class="start-icon">
+              <img src="./images/app-icons/project.svg" alt="" />my project
+            </button>
+            <button type="button" class="start-icon">
+              <img src="./images/app-icons/about.svg" alt="" />about
+            </button>
+            <button type="button" class="start-icon">
+              <img src="./images/app-icons/contact.svg" alt="" />contact
+            </button>
+            <button type="button" class="start-icon">
+              <img src="./images/app-icons/resume.svg" alt="" />resume
+            </button>
+            <button type="button" class="start-icon">
+              <img src="./images/app-icons/tagline.svg" alt="" />tagline.txt
+            </button>
+            <button type="button" class="start-icon">
+              <img src="./images/app-icons/headshot.svg" alt="" />headshot.jpg
+            </button>
+          </div>
+          <div class="start-switch">
+            <button type="button" class="start-btns" id="refresh-tab">
+              <img src="images/refresh-tab.svg" alt="" />refresh tab
+            </button>
+            <button type="button" class="start-btns" id="close-tab">
+              <img src="images/close-tab.svg" alt="" />close tab
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="taskbar-container">
+        <button type="button" class="start-btn" id="start">start</button>
+        <div class="taskbar">
+          <div class="tab-down">
+            <img src="images/app-icons/about.svg" alt="" class="tab-icon" />
+            <h6 class="tab-name">headshot.jpg</h6>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="./app-2.js"></script>
   </body>
 </html>
