@@ -1,68 +1,46 @@
-const app = [
-  {
-    id: 1,
-    name: "my project",
-    img: "./images/app-icons/project.svg",
-  },
-  {
-    id: 2,
-    name: "about",
-    img: "./images/app-icons/about.svg",
-  },
-  {
-    id: 3,
-    name: "contact",
-    img: "./images/app-icons/contact.svg",
-  },
-  {
-    id: 4,
-    name: "resume",
-    img: "./images/app-icons/resume.svg",
-  },
-  {
-    id: 5,
-    name: "tagline.txt",
-    img: "./images/app-icons/tagline.svg",
-  },
-  {
-    id: 6,
-    name: "headshot.jpg",
-    img: "./images/app-icons/headshot.svg",
-  },
-];
-
-// icons
-const icons = document.querySelector(".icons");
 const taskbar = document.querySelector(".taskbar");
-const tab = document.querySelector(".tab");
+const tabs = document.querySelector(".tabs");
+const btns = document.querySelectorAll(".icon-btn");
+const startBtns = document.querySelectorAll(".start-icon");
+const project = document.querySelector(".projects-container");
+const projBtns = document.querySelectorAll(".project-btn");
+const projViews = document.querySelectorAll(".project-viewer");
+// const closeBtns = document.querySelectorAll(".close-btn");
 
-window.addEventListener("DOMContentLoaded", function () {
-  displayIcons(app);
-});
+// pag click dapat nasa front yung tab
+// resize ung tab
+// disapper in start after 10 seconds pag di na click
 
-function displayTab() {
-  tab.classList.add("about");
-}
+// closeBtns.forEach(function (closeBtn) {
+//   closeBtn.addEventListener("click", function (e) {
+//     const element = e.target.parentElement.parentElement.parentElement;
+//     console.log(element);
+//     element.classList.remove(
+//       "project",
+//       "about",
+//       "contact",
+//       "resume",
+//       "welcome",
+//       "headshot",
+//       "active"
+//     );
+//   });
+// });
 
-function displayIcons(appItems) {
-  let display = appItems.map(function (item) {
-    return `<button type="button" class="icon-btn" data-id=${item.name}>
-    <img src=${item.img} alt="" />${item.name}
-      </button>`;
-  });
-  display = display.join("");
-
-  icons.innerHTML = display;
-  const apps = icons.querySelectorAll(".icon-btn");
-
-  apps.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      const category = e.currentTarget.dataset.id;
-      if (category) {
-      }
+project.addEventListener("click", function (e) {
+  const id = e.target.dataset.id;
+  if (id) {
+    projBtns.forEach(function (projBtn) {
+      projBtn.classList.remove("open-btn");
     });
+    e.target.classList.add("open-btn");
+  }
+  projViews.forEach(function (projView) {
+    projView.classList.remove("open-view");
   });
-}
+  const element = document.getElementById(id);
+  element.classList.add("open-view");
+});
 
 // start
 const startBtn = document.querySelector(".start-btn");
@@ -70,4 +48,69 @@ const startContainer = document.querySelector(".start-container");
 
 startBtn.addEventListener("click", function () {
   startContainer.classList.toggle("active");
+  setTimeout(function () {
+    startContainer.classList.remove("active");
+  }, 5000);
 });
+
+// open app
+// background
+btns.forEach(function (btn) {
+  btn.addEventListener("click", openApp);
+});
+// start
+startBtns.forEach(function (startBtn) {
+  startBtn.addEventListener("click", openApp);
+});
+
+//closing app
+function openApp(e) {
+  // e.preventDefault();
+  const id = e.target.dataset.id;
+  const element = document.getElementById(id);
+  element.classList.add("active");
+
+  const tabBtns = element.querySelector(".tab-btn");
+  tabBtns.addEventListener("click", resize);
+
+  const closeBtn = document.querySelector(".close-btn");
+  closeBtn.addEventListener("click", closeApp);
+
+  setDefault();
+}
+
+function resize(e) {
+  const element = e.currentTarget.parentElement.parentElement.parentElement;
+  element.classList.toggle("resize");
+}
+
+function closeApp(e) {
+  const element = e.currentTarget.parentElement.parentElement.parentElement;
+  console.log(element);
+  element.classList.remove(
+    "project",
+    "about",
+    "contact",
+    "resume",
+    "welcome",
+    "headshot",
+    "active"
+  );
+}
+
+function setDefault() {
+  startContainer.classList.remove("active");
+}
+
+// move tab
+// function onDrag(e, movementX, movementY) {
+//   const element =
+//     e.currentTarget.parentElement.parentElement.parentElement.parentElement;
+//   console.log(e, movementX, movementY);
+
+//   let getStyle = window.getComputedStyle(element);
+//   let leftVal = parseInt(getStyle.left);
+//   let topVal = parseInt(getStyle.top);
+//   element.style.left = `${leftVal + movementX}px`;
+//   element.style.top = `${topVal + movementY}px`;
+// }
