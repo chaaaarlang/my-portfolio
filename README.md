@@ -1,2 +1,1 @@
-# my-portfolio
-https://chaaaarlang.github.io/my-portfolio/
+[my-portfolio](https://chaaaarlang.github.io/my-portfolio/)
