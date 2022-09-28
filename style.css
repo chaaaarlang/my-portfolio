@@ -391,13 +391,6 @@ body {
   width: 330px;
 }
 
-#proj-two > .project-img {
-  background: url(images/proj_002.png) center/cover;
-}
-#proj-one > .project-img {
-  background: url(images/proj_001.png) center/cover;
-}
-
 .proj-title {
   margin-bottom: 20px;
   width: 100%;
